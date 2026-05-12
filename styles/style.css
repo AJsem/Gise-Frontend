@@ -4,7 +4,8 @@
     --clr-shadow: rgb(248, 248, 248);
     --font-primary: "Inter", sans-serif;
     --font-secondary: "Raleway", sans-serif;
-    --font-size-h2: 2.4rem;
+    --font-size-h3: 2.4rem;
+    --font-size-h2: 3.4rem;
     --font-size-h1: 4rem;
     --font-size-txt: 1.8rem;
     --line-height-h1: 1.3;
@@ -22,9 +23,19 @@ body {
     font-style: normal;
     line-height: var(--line-height-txt);
     width: 100%;
-    min-height: 100vh;
+    min-height: 100%;
     font-size: var(--font-size-txt);
-    padding: 1.5rem;
+}
+
+main.container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 3rem;
 }
 
 /* NAVIGATION BAR STYLINGS */
@@ -38,8 +49,13 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.5rem 1.5rem;
-    z-index: 1000;
+    padding: 2.5rem 3rem;
+    margin-top: 2rem;
+    z-index: 10;
+}
+
+nav h3.name {
+    font-weight: 400;
 }
 
 nav div.name-logo {
@@ -58,7 +74,7 @@ div.name-logo img.logo {
 nav div.nav-btn {
     cursor: pointer;
     position: relative;
-	z-index: 1000;
+	z-index: 15;
 	width: 2.4rem;
 	height: 1.8rem;
 }
@@ -103,14 +119,36 @@ div.nav-btn.active > :nth-child(3) {
 }
 
 /* Frontal Text */
+main div.frontal-flex, div.frontal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: inherit;
+    height: fit-content;
+}
+
 main h1.head {
     text-align: center;
-    font-size: var(--font-size-h1);
-    margin: 6rem 2rem 2rem;
-    font-family: var(--font-secondary);
-    font-weight: 400;
+    margin: 7rem 2rem 1rem;
     font-style: normal;
     line-height: var(--line-height-h1);
+}
+
+/* Frontal Image */
+div.frontImage {
+    max-width: 100%;
+    overflow: hidden;
+    height: auto;
+    border-top-right-radius: 15rem;
+    border-bottom-left-radius: 15rem;
+    margin: 2rem 0 6rem;
+}
+
+div.frontImage img {
+    width: 100%;
+    height: auto;
 }
 
 main p.short-descript {
@@ -122,17 +160,198 @@ a.btn.book-consultation {
     text-decoration: none;
     background: grey;
     color: white;
-    margin: 2rem 0;
-    padding: 1.5rem 2rem;
+    margin: 1rem 0;
+    padding: 1.5rem 2.4rem;
     border-radius: 3rem;
     display: inline-block;
-    font-size: calc(var(--font-size-txt - .2rem));
+    font-size: calc(var(--font-size-txt) - .2rem);
+    font-weight: 500;
 }
 
+main div.whoIsGiseFor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    height: fit-content;
+}
 
-main .target h3 {
+img.forWho {
+    width: 100%;
+    height: auto;
+    margin: 3rem 0 1.5rem;
+}
+
+main section.targets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 4rem;
+    width: 100%;
+    height: fit-content;
+    margin: 3rem 0;
+}
+
+section.targets div.target {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2.5rem;
+    width: 100%;
+    height: fit-content;
+}
+
+section.targets div.target img {
+    width: 100%;
+    height: auto;
+}
+
+section.targets div.target h3 {
+    margin-bottom: -1rem;
+    font-weight: 500;
+}
+
+main div.our-approach {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 10rem 3rem 4rem;
+    margin: 0 -3rem;
+    background: red;
+}
+
+main div.our-approach img {
+    width: 100%;
+    height: auto;
+}
+
+main div.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+div.testimonials div.nameCont {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+div.nameCont div.imageCont {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+div.book-now {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 4rem;
+    padding: 6rem 3rem;
+    padding: 10rem 3rem 4rem;
+    margin: 0 -3rem;
+    background: lightpink;
+}
+
+div.book-now div.readyImage {
+    max-width: 100%;
+    overflow: hidden;
+    height: auto;
+    border-top-right-radius: 15rem;
+    border-bottom-left-radius: 15rem;
+    /*margin: 2rem 0 3rem;*/
+}
+
+div.readyImage img {
+    width: 100%;
+    height: auto;
+}
+
+div.book-now h2 {
+    font-size: calc(var(--font-size-h2) - .4rem);
+}
+
+/*FOOTER STYLINGS*/
+footer {
+    width: 100%;
+    padding : 6rem 3rem;
+    background: lightblue;
+    font-size: calc(var(--font-size-txt) - .2rem);
+}
+
+footer div.foot-nav-links, div.contact {
+    margin-bottom: 4rem;
+}
+
+footer div.foot-nav-links h3,
+div.contact h3 {
+    font-size: calc(var(--font-size-h2) - .6rem);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+div.foot-nav-links li,
+div.contact li {
+    list-style: none;
+    color: white;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    color: black;
+}
+
+div.foot-nav-links li a,
+div.contact li a {
+    color: black;
+    text-decoration: none;
+}
+
+div.contact div.contacts-list {
+    font-size: var(--font-size-txt);
+}
+
+div.foot-nav-links li:hover,
+div.contact li:hover {
+    text-decoration: underline;
+}
+
+div.social-media {
+    display: flex;
+    gap: 1.4rem;    
+}
+
+div.social-media a {
+    color: black;
+}
+
+/* Utilities / Other Stylings */
+h1 {
+    font-size: var(--font-size-h1);
+}
+
+h2 {
     font-size: var(--font-size-h2);
-    font-weight: 400;
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-secondary);
+}
+
+h1, h2 {
+    font-weight: 500;
 }
 
 .hidden {
