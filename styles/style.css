@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --clr-primary: #0f172a/*#F6F8F6*//*#E7EFE8*/;
-    --clr-secondary: #7A2E2E;
-    --clr-bg: #F7F4F2;
-    --clr-light: #ffffff;
+
+    --clr-primary: #ffffff;
+    --clr-secondary: #0f172a;
+    --clr-accent: #f1efef;
     --clr-bg-btn: #7A2E2E;
+    /* --clr-primary: #F6F8F6#E7EFE8; */
+    --clr-light: #ffffff;
+    --clr-dark: #1F1B16;
+    --clr-txt: #3F3A3A;
+
+    
     --clr-txt-1: #1F2937/*#2F3A34*/;
-    --clr-head-white-bg: #1F1B16;
-    --clr-txt-light: #3F3A3A;
+   
     --clr-txt-light-2: #ded5d3;
     --clr-txt-light-3: #d6d6d6;
     --clr-shadow-1: 0 1px 3px rgba(0, 0, 0, .06);
@@ -33,7 +38,7 @@ html {
 }
 
 body {
-    background: var(--clr-bg);
+    background: var(--clr-primary);
     color: var(--clr-txt-light);
     font-family: var(--font-primary);
     font-optical-sizing: auto;
@@ -75,7 +80,7 @@ nav {
 
 nav h3.name {
     font-weight: 400;
-    color: var(--clr-primary);
+    color: var(--clr-dark);
 }
 
 nav div.name-logo {
@@ -104,7 +109,7 @@ div.nav-btn > * {
 	left: 0;
 	width: 100%;
 	height: .2rem;
-	background: var(--clr-primary);
+	background: var(--clr-bg-btn);
 	border-radius: 1rem;
 	transition: .5s ease;
 }
@@ -142,41 +147,42 @@ div.nav-btn.active > :nth-child(3) {
 nav ul.links {
     position: absolute;
     list-style: none;
-    background: var(--clr-secondary);
+    background: var(--clr-light);
     width: 100%;
     height: 100vh;
     left: 0;
-    top: 7rem;
+    transform: translateX(-100%);
+    top: 7.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3rem;
     padding: 6rem 4rem;
-    border-top: .1rem dashed var(--clr-primary);
+    border-top: .1rem dashed var(--clr-accent);
+    transition: 1s ease;
+}
+
+nav ul.links.active {
+    transform: translateX(0);
+    top: 7.5rem;
 }
 
 nav ul.links li {
     text-transform: uppercase;
-    border: .1rem solid var(--clr-primary);
+    border: .1rem solid var(--clr-accent);
     width: 100%;
     padding: 1.5rem 0;
     
     border-radius: 1rem;
 }
 
-nav a.btn.book-consultation {
-    background: var(--clr-bg-btn);
-    color: var(--clr-light);
-}
-
 nav ul.links li a {
     text-decoration: none;
-    color: black;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
-    color: var(--clr-light);
+    color: var(--clr-txt);
 }
 
 nav ul.links li a:hover {
@@ -199,7 +205,7 @@ main h1.head {
     margin: 7rem 2rem 1rem;
     font-style: normal;
     line-height: var(--line-height-h1);
-    color: var(--clr-head-white-bg);
+    color: var(--clr-dark);
 }
 
 /* Frontal Image */
@@ -245,7 +251,7 @@ main div.whoIsGiseFor {
 }
 
 div.whoIsGiseFor h2 {
-    color: var(--clr-head-white-bg);
+    color: var(--clr-dark);
 }
 
 main section.targets {
@@ -255,10 +261,12 @@ main section.targets {
     /*width: 100%;*/
     height: fit-content;
     margin: 6rem 0 3rem;
-    background: var(--clr-primary);
-    color: var(--clr-txt-light-3);
+    background: var(--clr-accent);
+    color: var(--clr-txt);
     margin: 5rem -3rem 0;
-    padding: 3rem 3rem;
+    padding: 6rem 3rem 3rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
 }
 
 section.targets div.target {
@@ -269,14 +277,9 @@ section.targets div.target {
     height: fit-content;
 }
 
-section.targets div.target img {
-    width: 100%;
-    height: auto;
-}
-
 section.targets div.target h3 {
     margin-bottom: -1rem;
-    color: var(--clr-light);
+    color: var(--clr-dark);
 }
 
 main div.our-approach {
@@ -287,13 +290,17 @@ main div.our-approach {
     gap: 2rem;
     padding: 10rem 3rem 4rem;
     margin: -2rem -3rem 0;
-    background-color: var(--clr-txt-light);
-    color: var(--clr-txt-light-3);
+    background-color: var(--clr-secondary);
+    color: var(--clr-accent);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
 }
 
-main div.our-approach img {
+main div.our-approach img,
+section.targets div.target img {
     width: 100%;
     height: auto;
+    border-radius: 1rem;
 }
 
 main div.our-approach h2 {
@@ -305,7 +312,7 @@ main div.testimonials {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 2rem;
+    gap: 3rem;
     margin: 3rem 0;
 }
 
@@ -319,7 +326,19 @@ div.nameCont div.imageCont {
     width: 4.8rem;
     height: 4.8rem;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 1px solid none;
+    overflow: hidden;
+}
+
+div.testimonials div.imageCont img {
+    width: inherit;
+    height: inherit;
+}
+
+div.testimonials div.nameCont span.name {
+    font-size: calc(var(--font-size-txt)  - .2rem);
+    font-weight: 500;
+    
 }
 
 div.book-now {
@@ -333,7 +352,11 @@ div.book-now {
     padding: 6rem 3rem;
     padding: 10rem 3rem 4rem;
     margin: 0 -3rem;
-    background: var(--clr-light);
+    background: var(--clr-accent);
+}
+
+div.book-now a.btn.book-consultation{
+    background: var(--clr-txt) ;
 }
 
 div.book-now div.readyImage {
@@ -358,7 +381,7 @@ div.book-now h2 {
 footer {
     width: 100%;
     padding : 8rem 3rem;
-    background: var(--clr-primary);
+    background: var(--clr-secondary);
     color: var(--clr-light);
     font-size: calc(var(--font-size-txt) - .2rem);
 }
@@ -376,16 +399,8 @@ div.contact h3 {
 div.foot-nav-links li,
 div.contact li {
     list-style: none;
-    color: var(--clr-light);
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
     font-weight: 500;
-    color: var(--clr-light);
-}
-
-div.foot-nav-links li a,
-div.contact li a {
-    color: var(--clr-light);
-    text-decoration: none;
 }
 
 div.contact div.contacts-list {
@@ -402,8 +417,11 @@ div.social-media {
     gap: 1.4rem;    
 }
 
-div.social-media a {
+footer  a,
+footer li
+ {
     color: var(--clr-light);
+    text-decoration: none;
 }
 
 /* Utilities / Other Stylings */
