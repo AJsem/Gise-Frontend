@@ -8,6 +8,14 @@ const navigation = () => {
     });
 }
 
+const updateYear = () => {
+    const spanYear = document.querySelector("footer span.year");
+    const date = new Date();
+    
+    spanYear.textContent = date.getFullYear();
+}
+
 export default {
-    navigation
+    navigation,
+    updateYear
 }

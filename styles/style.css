@@ -35,11 +35,12 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
     background: var(--clr-primary);
-    color: var(--clr-txt-light);
+    color: var(--clr-txt);
     font-family: var(--font-primary);
     font-optical-sizing: auto;
     font-weight: 400;
@@ -185,6 +186,11 @@ nav ul.links li a {
     color: var(--clr-txt);
 }
 
+nav ul.links li a.c-opened {
+    font-weight: 500;
+    color: var(--clr-secondary);
+}
+
 nav ul.links li a:hover {
     text-decoration: underline;
 }
@@ -228,6 +234,7 @@ main p.short-descript {
     margin: 0 2rem;
 }
 
+/* BOOK CONSULTATION BUTTON */
 a.btn.book-consultation {
     text-decoration: none;
     background: var(--clr-bg-btn);
@@ -240,6 +247,7 @@ a.btn.book-consultation {
     font-weight: 500;
 }
 
+/*  */
 main div.whoIsGiseFor {
     display: flex;
     flex-direction: column;
@@ -254,6 +262,7 @@ div.whoIsGiseFor h2 {
     color: var(--clr-dark);
 }
 
+/* TARGETS STYLING */
 main section.targets {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -262,14 +271,13 @@ main section.targets {
     height: fit-content;
     margin: 6rem 0 3rem;
     background: var(--clr-accent);
-    color: var(--clr-txt);
     margin: 5rem -3rem 0;
     padding: 6rem 3rem 3rem;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
 }
 
-section.targets div.target {
+main section.targets div.target {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 2.5rem;
@@ -277,12 +285,55 @@ section.targets div.target {
     height: fit-content;
 }
 
-section.targets div.target h3 {
+main section.targets div.target h3 {
     margin-bottom: -1rem;
     color: var(--clr-dark);
 }
 
-main div.our-approach {
+/* WHAT WE DO STYLINGS */
+main section.what-we-do {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    /* text-align: center; */
+    gap: 2rem;
+    padding: 6rem 3rem 4rem;
+    margin: -2rem -3rem 0;
+}
+
+main section.what-we-do h2 {
+    color: var(--clr-bg-btn);
+}
+
+main section.what-we-do h3 {
+    color: var(--clr-dark);
+    margin-bottom: 1rem;
+}
+
+main section.what-we-do a.btn.services.learn-more,
+main section.about-preview a.btn.about-us {
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    margin: 2rem 0;
+    padding: 1.5rem 2.4rem;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    display: inline-block;
+    text-decoration: none;
+    font-size: calc(var(--font-size-txt) - .2rem);
+    font-weight: 500;
+}
+
+main section.what-we-do div.tasks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2.5rem;
+    width: 100%;
+    height: fit-content;
+}
+
+/* OUR APPROACH STYLING */
+main section.our-approach {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -296,18 +347,79 @@ main div.our-approach {
     border-bottom-right-radius: 2rem;
 }
 
-main div.our-approach img,
-section.targets div.target img {
+main section.our-approach img,
+main section.targets div.target img {
     width: 100%;
     height: auto;
     border-radius: 1rem;
 }
 
-main div.our-approach h2 {
+main section.our-approach h2 {
     color: var(--clr-light);
 }
 
-main div.testimonials {
+/* WHY CHOOSE US STYLING */
+main section.why-choose-us {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 6rem 0rem 4rem;
+}
+
+main section.why-choose-us h2 {
+    color: var(--clr-bg-btn);
+}
+
+main section.why-choose-us ul.benefits,
+main section.clients-portfolio ul.clients {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: -2rem;
+    padding-left: 3rem;
+}
+
+main section.why-choose-us ul.benefits li,
+main section.clients-portfolio ul.clients li {
+    list-style: square;
+    margin-left: -1.2rem
+}
+
+/* CLIENT PORFOLIO STYLING */
+main section.clients-portfolio {
+    background: var(--clr-accent);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 6rem 3rem 4rem;
+    margin: -2rem -3rem 0;
+}
+
+main section.clients-portfolio h2 {
+    color: var(--clr-bg-btn);
+}
+
+main section.clients-portfolio ul.clients {
+    margin-top: 1rem;
+}
+
+/* ABOUT PREVIEW STYLING */
+main section.about-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    padding: 6rem 3rem 4rem;
+    margin: -2rem -3rem 0;
+}
+main section.about-preview a.btn.about-us {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+}
+
+/* TESTIMONIALS STYLING */
+main section.testimonials {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -316,10 +428,15 @@ main div.testimonials {
     margin: 3rem 0;
 }
 
-div.testimonials div.nameCont {
+main section.testimonials h2 {
+    color: var(--clr-dark);
+}
+
+main section.testimonials div.nameCont {
     display: flex;
     align-items: center;
     gap: 2rem;
+    color: var(--clr-dark);
 }
 
 div.nameCont div.imageCont {
@@ -330,18 +447,18 @@ div.nameCont div.imageCont {
     overflow: hidden;
 }
 
-div.testimonials div.imageCont img {
+main section.testimonials div.imageCont img {
     width: inherit;
     height: inherit;
 }
 
-div.testimonials div.nameCont span.name {
+main section.testimonials div.nameCont span.name {
     font-size: calc(var(--font-size-txt)  - .2rem);
-    font-weight: 500;
-    
+    font-weight: 500; 
 }
 
-div.book-now {
+/* BOOK NOW STYLING */
+main section.book-now {
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -349,17 +466,16 @@ div.book-now {
     justify-content: center;
     text-align: center;
     gap: 4rem;
-    padding: 6rem 3rem;
     padding: 10rem 3rem 4rem;
     margin: 0 -3rem;
     background: var(--clr-accent);
 }
 
-div.book-now a.btn.book-consultation{
+main section.book-now a.btn.book-consultation{
     background: var(--clr-txt) ;
 }
 
-div.book-now div.readyImage {
+main section.book-now div.readyImage {
     max-width: 100%;
     overflow: hidden;
     height: auto;
@@ -373,7 +489,7 @@ div.readyImage img {
     height: auto;
 }
 
-div.book-now h2 {
+main section.book-now h2 {
     font-size: calc(var(--font-size-h2) - .4rem);
 }
 
@@ -384,6 +500,7 @@ footer {
     background: var(--clr-secondary);
     color: var(--clr-light);
     font-size: calc(var(--font-size-txt) - .2rem);
+    position: relative;
 }
 
 footer div.foot-nav-links, div.contact {
@@ -407,15 +524,46 @@ div.contact div.contacts-list {
     font-size: var(--font-size-txt);
 }
 
-div.foot-nav-links li:hover,
-div.contact li:hover {
+div.foot-nav-links li a:hover,
+div.contact li a:hover {
     text-decoration: underline;
+}
+
+div.foot-nav-links li a.c-opened {
+    text-decoration: underline;
+    opacity: .8;
+}
+
+div.foot-nav-links li a.c-opened:hover {
+    text-decoration: none !important;
 }
 
 div.social-media {
     display: flex;
-    gap: 1.4rem;    
+    gap: 1.4rem;   
 }
+
+div.copyright {
+    position: absolute;
+    left: 0;
+    bottom: 1rem;
+    font-size: 1.4rem;
+    text-align: center;
+    width: inherit;
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+a.back-top {
+    display: inline-block;
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    padding: .2rem 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
 
 footer  a,
 footer li
@@ -424,7 +572,7 @@ footer li
     text-decoration: none;
 }
 
-/* Utilities / Other Stylings */
+/* UTILITIES AND OTHER STYLINGS */
 h1 {
     font-size: var(--font-size-h1);
     font-weight: var(--font-weight-h1);
@@ -443,6 +591,14 @@ h3 {
 
 h1, h2, h3 {
     font-family: var(--font-secondary);
+}
+
+a {
+    transition: 300ms ease-in;
+}
+
+a:hover {
+    transform: scale(1.02);
 }
 
 .hidden {
