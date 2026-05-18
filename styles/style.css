@@ -195,6 +195,43 @@ nav ul.links li a:hover {
     text-decoration: underline;
 }
 
+/* HERO SECTION STYLING */
+main div.hero-section {
+    position: relative;
+    z-index: 2;
+
+    max-width: 60rem;
+    min-height: 100vh;
+
+    color: var(--clr-light);
+
+    background-image: url("../assets/images/hero-image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    margin: 0 -3rem;
+    padding: 2rem;
+}
+
+.hero-section .head {
+    text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    color: var(--clr-light);
+    font-weight: 700;
+}
+
+.hero-section .short-descript {
+    color: rgba(255,255,255,0.5);
+    max-width: 520px;
+    text-shadow: 0 2px 10px rgba(0,0,0);
+}
+
 /* Frontal Text */
 main div.frontal-flex, div.frontal {
     display: flex;
