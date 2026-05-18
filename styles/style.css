@@ -249,16 +249,19 @@ main div.hero-section::before {
     z-index: -1;
 }
 
-.hero-section .head {
+div.hero-section h1.head {
     text-shadow: 0 4px 8px rgba(0,0,0, .8);
-    text-outline: 1px solid red;
     color: var(--clr-accent);
     -webkit-text-stroke: .1rem rgba(0, 255, 70, .5);
     font-weight: 700;
     line-height: 1.5;
+    text-align: center;
+    margin: 12rem 2rem 1rem;
+    font-style: normal;
+    /* line-height: var(--line-height-h1); */
 }
 
-.hero-section .short-descript {
+div.hero-section p.short-descript {
     color: rgba(255, 255, 255, 0.88);
     max-width: 520px;
     font-weight: 500;
@@ -274,14 +277,11 @@ main div.frontal-flex, div.frontal {
     gap: 2rem;
     width: inherit;
     height: fit-content;
+    margin-top: -5rem;
 }
 
 main h1.head {
-    text-align: center;
-    margin: 12rem 2rem 1rem;
-    font-style: normal;
-    line-height: var(--line-height-h1);
-    color: var(--clr-dark);
+    
 }
 
 /* Frontal Image */
@@ -340,11 +340,13 @@ main section.targets {
     /*width: 100%;*/
     height: fit-content;
     margin: 6rem 0 3rem;
-    background: var(--clr-accent);
+    /* background: var(--clr-accent); */
+    background: #021A14;
     margin: 5rem -3rem 0;
     padding: 6rem 3rem 3rem;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
+    color: var(--clr-accent);
 }
 
 main section.targets div.target {
@@ -357,7 +359,8 @@ main section.targets div.target {
 
 main section.targets div.target h3 {
     margin-bottom: -1rem;
-    color: var(--clr-dark);
+    /* color: var(--clr-dark); */
+    color: var(--clr-light);
 }
 
 /* WHAT WE DO STYLINGS */
@@ -382,7 +385,7 @@ main section.what-we-do h3 {
 
 main section.what-we-do a.btn.services.learn-more,
 main section.about-preview a.btn.about-us {
-    background: var(--clr-dark);
+    background: #021A14;
     color: var(--clr-light);
     margin: 2rem 0;
     padding: 1.5rem 2.4rem;
