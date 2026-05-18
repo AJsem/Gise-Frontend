@@ -201,7 +201,7 @@ main div.hero-section {
     z-index: 2;
 
     max-width: 60rem;
-    min-height: 100vh;
+    min-height: fit-content;
 
     color: var(--clr-light);
 
@@ -212,7 +212,7 @@ main div.hero-section {
     gap: 2rem;
 
     margin: 0 -3rem;
-    padding: 2rem;
+    padding: 3rem 2rem 3rem;
 
     overflow: hidden;
 }
@@ -237,16 +237,16 @@ main div.hero-section::before {
 
 .hero-section .head {
     text-shadow: 0 4px 20px rgba(255,255,255, .8);
-    color: var(--clr-secondary);
+    color: #2B3440;
     font-weight: 700;
     line-height: 1.5;
 }
 
 .hero-section .short-descript {
-    color: var(--var-dark);
+    color: rgba(255, 255, 255, 0.88);
     max-width: 520px;
     font-weight: 500;
-    text-shadow: 0 2px 10px rgba(0, 0, 100, 1);
+    text-shadow: 0 2px 10px rgba(0, 0, 70, 1);
 }
 
 /* Frontal Text */
@@ -262,7 +262,7 @@ main div.frontal-flex, div.frontal {
 
 main h1.head {
     text-align: center;
-    margin: 0rem 2rem 1rem;
+    margin: 3rem 2rem 1rem;
     font-style: normal;
     line-height: var(--line-height-h1);
     color: var(--clr-dark);
