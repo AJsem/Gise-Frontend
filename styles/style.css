@@ -221,13 +221,13 @@ main div.hero-section {
 }
 
 .hero-section .head {
-    text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    text-shadow: 0 4px 20px rgba(0,0,0,0.3);
     color: var(--clr-light);
     font-weight: 700;
 }
 
 .hero-section .short-descript {
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.8);
     max-width: 520px;
     text-shadow: 0 2px 10px rgba(0,0,0);
 }
