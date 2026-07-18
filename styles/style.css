@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-
-    --clr-primary: #ffffff;
+    --clr-primary: rgb(1, 15, 1);
+    --clr-primary-2: #ffffff;
     --clr-secondary: #0f172a;
+    --clr-sub: #021A14;
+    --clr-sub-2: rgb(197, 240, 148);
     --clr-accent: #f1efef;
     --clr-bg-btn: #7A2E2E;
-    /* --clr-primary: #F6F8F6#E7EFE8; */
     --clr-light: #ffffff;
     --clr-dark: #1F1B16;
     --clr-txt: #def8e1;
@@ -39,7 +40,7 @@ html {
 }
 
 body {
-    background: rgb(1, 15, 1);
+    background: var(--clr-primary);
     color: var(--clr-txt);
     font-family: var(--font-primary);
     font-optical-sizing: auto;
@@ -133,11 +134,11 @@ nav.scrolled {
     background: var(--clr-light);
 } 
 nav.scrolled h3.name {
-    color: #021A14;
+    color: var(--clr-sub);
 }
 
 nav.scrolled div.nav-btn > * {
-    background: #021A14
+    background: var(--clr-sub);
 }
 
 /*Active bar styling*/
@@ -161,7 +162,7 @@ div.nav-btn.active > :nth-child(3) {
 nav ul.links {
     position: absolute;
     list-style: none;
-    background: rgb(1, 15, 1);
+    background: var(--clr-primary);
     width: 100%;
     height: 100vh;
     left: 0;
@@ -388,7 +389,7 @@ main section.what-we-do {
 }
 
 main section.what-we-do h2 {
-    color: rgb(197, 240, 148);
+    color: var(--clr-sub-2);
 }
 
 main section.what-we-do h3 {
@@ -398,7 +399,7 @@ main section.what-we-do h3 {
 
 main section.what-we-do a.btn.services.learn-more,
 main section.about-preview a.btn.about-us {
-    background: #021A14;
+    background: var(--clr-sub);
     color: var(--clr-light);
     margin: 2rem 0;
     padding: 1.5rem 2.4rem;
@@ -433,7 +434,7 @@ main section.our-approach {
     padding: 10rem 3rem 4rem;
     margin: -2rem -3rem 0;
     background-color: rgba(179, 189, 160, 1);
-    color: rgb(1, 15, 1);
+    color: var(--clr-primary);
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
 }
@@ -446,7 +447,7 @@ main section.targets div.target img {
 }
 
 main section.our-approach h2 {
-    color: rgb(1, 15, 1);
+    color: var(--clr-primary);
     font-weight: 600;
 }
 
@@ -463,11 +464,11 @@ main section.why-choose-us {
 }
 
 main section.why-choose-us h2 {
-    color: rgb(197, 240, 148);
+    color: var(--clr-sub-2);
 }
 
 main section.why-choose-us h3 {
-    color: rgb(197, 240, 148);
+    color: var(--clr-sub-2);
 }
 
 main section.why-choose-us ul.benefits,
@@ -573,12 +574,12 @@ main section.book-now {
     padding: 10rem 3rem 4rem;
     margin: 0 -3rem;
     background: var(--clr-accent);
-    color: rgb(1, 15, 1);
+    color: var(--clr-primary);
     margin-top: -2rem;
 }
 
 main section.book-now a.btn.book-consultation{
-    background: rgb(1, 15, 1);
+    background: var(--clr-primary);
     color: var(--clr-light);
 }
 
@@ -604,7 +605,7 @@ main section.book-now h2 {
 footer {
     width: 100%;
     padding : 8rem 3rem;
-    background: rgb(1, 15, 1));
+    background: rgb(10, 35, 20);
     color: var(--clr-light);
     font-size: calc(var(--font-size-txt) - .2rem);
     position: relative;
@@ -742,10 +743,78 @@ a:hover {
 }
 
 @media (min-width: 800px) {
+    main {
+        width: 100%;
+    }
+    main div.hero-section {
+        max-width: 140rem;
+        padding: 3rem 4rem 3rem;
+    }
+
+    main div.hero-section h1.head {
+        font-size: 5rem;
+        margin-top: 3rem;
+    }
+
+    main div.frontal-flex {
+        margin-top: -22rem;
+    }
+
+    main div.frontal-flex a.btn.book-consultation {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 6rem;
+    }
+
+    main div.frontal-flex div.frontImage {
+        width: 60rem;
+        height: auto;
+    }
+
+    main div.hero-section::before {
+        width: 100% ;        
+        background-size: cover;
+        background-position: revert;
+        background-repeat: repeat;
+        filter: blur(.2rem);
+        transform: scale(1.05);
+    }
+
+    main div.whoIsGiseFor {
+        padding: 0 5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main section.testimonials {
+        padding-left: 13rem;
+        padding-right: 13rem;
+        background: none;
+        color: var(--clr-light);
+    }
+
+    main section.testimonials h2 {
+        color: var(--clr-light);
+    }
+
+    main section.book-now {
+        max-width: 60rem;
+        border-radius: 1rem;
+        margin: auto;
+    }
+
     footer {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
         gap: 2rem;
+    }
+
+    a.back-top {
+        grid-column: span 3;
+        width: 100%;
+        font-weight: 500;
     }
 
     .margin {
@@ -789,7 +858,11 @@ a:hover {
     }
 
     nav.scrolled ul.links li:hover {
-        border-color: var(--clr-txt);
+        border-color: var(--clr-primary);
+    }
+
+    nav.scrolled ul.links li a {
+        color: var(--clr-primary) !important;
     }
 
     nav ul.links li a {
@@ -797,7 +870,12 @@ a:hover {
     }
 
     nav.scrolled ul.links li a {
-        color: var(--clr-primary);
+        color: var(--clr-primary-2);
+    }
+
+    nav.scrolled a.btn {
+        color: var(--clr-light);
+        background: var(--clr-primary);
     }
 
     nav ul.links li a:hover {

@@ -1,0 +1,39 @@
+main.container {
+    padding-top: 7rem;
+    gap: 4rem;
+}
+
+main.container section {
+    display: grid;
+    gap: 1rem;
+}
+
+h2 {
+    font-size: 3.0rem;
+} 
+
+h3 {
+    font-size: 2.2rem;
+}
+
+div.service-category {
+    margin-top: 5rem;
+}
+
+div.service-category div.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+div.services div.service {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: var(--clr-txt);
+    color: var(--clr-dark);
+    box-shadow: var(--clr-shadow-1);
+    border-bottom: .1rem solid var(--clr-light);
+}
