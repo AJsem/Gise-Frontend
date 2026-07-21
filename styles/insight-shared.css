@@ -2,12 +2,16 @@ h2.head {
     align-self: flex-start;
 }
 
+section.body {
+    margin-bottom: 8rem;
+}
+
 section.body div.txt div.more {
     margin-top: 4rem;
     font-size: 1.7rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 2rem;
+    gap: 3rem;
 }
 
 div.more p {

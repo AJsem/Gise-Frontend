@@ -6,8 +6,9 @@ main.container {
 main.container section.insights {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)) !important;
-    gap: 4rem;
+    gap: 6rem;
     margin-top: 3rem;
+    margin-bottom: 8rem;
 }
 
 section.insights div.insight {

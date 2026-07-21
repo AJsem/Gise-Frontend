@@ -6,7 +6,7 @@ main.container {
 }
 
 main.container div.intro:first-of-type p.instr {
-    margin-top: 3rem;
+    margin-top: 6rem;
 }
 
 main.container div.contact {
@@ -31,7 +31,9 @@ div.contact div.contacts-list div.group span
     font-weight: 600;
 }
 
-
+div.intro.form {
+    margin-top: 8rem;
+}
 
 form.contact {
     display: grid;
@@ -40,7 +42,7 @@ form.contact {
     max-width: 40rem;
     padding: 2rem;
     border: .1rem solid var(--clr-sub-2);
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
     margin-top: -2rem;
 }
 
@@ -48,7 +50,7 @@ form.contact input,
 form.contact textarea,
 form.contact select,
 form.contact button[type="submit"] {
-    padding: .5rem 1rem;
+    padding: 1rem 1.5rem;
     border: .1rem solid transparent;
     border-radius: .5rem;
     background-color: var(--clr-sub-2);
@@ -56,8 +58,8 @@ form.contact button[type="submit"] {
     font-size: 1.6rem;
 }
 
-form.contact button {
-    
+form.contact select:hover {
+    cursor: pointer;
 }
 
 form.contact textarea {
