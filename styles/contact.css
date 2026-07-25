@@ -1,5 +1,7 @@
 main.container {
     padding-top: 7rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     gap: 4rem;
     align-items: flex-start;
     display: grid;

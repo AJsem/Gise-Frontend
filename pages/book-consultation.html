@@ -56,17 +56,19 @@
         <div></div>
             
         <form action="https://formsubmit.co/emmanuelavwomakpa@gmail.com" method="POST" class="contact">
+            <input type="text" name="Gise Form Type" value="Consultation" class="hidden">
+
             <div class="intro form">
                 <p class="consultHead">Consultation Form:</p>
             </div>
 
-            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="text" name="Client's Name" placeholder="Full Name" required>
 
-            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="email" name="Client's Email" placeholder="Email Address" required>
 
-            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="tel" name="Client's Phone" placeholder="Phone Number" required>
 
-            <select name="services" id="services" required>
+            <select name="Services Needed" id="services" required>
                 <option value="" disabled selected>Service required</option>
                 <option value="Audit">Audit</option>
                 <option value="Bookeeping">Bookkeeping</option>
@@ -83,12 +85,12 @@
             </select>
 
             <label for="date">Preferred Consultation Date</label>
-            <input type="date" id="date" name="consultationDate"  required>
+            <input type="date" id="date" name="Client's Preferred Consultation Date"  required>
 
             <label for="time">Preferred Time</label>
-            <input type="time" id="time" name="consultationTime" value="12:00" required>
+            <input type="time" id="time" name="Client's Preferred Consultation Time" value="12:00" required>
 
-            <textarea name="message" id="" placeholder="Tell us about your business needs or challenges..." required></textarea>
+            <textarea name="Client's Message" id="" placeholder="Tell us about your business needs or challenges..." required></textarea>
 
             <button type="submit">Request Consultation</button>
         </form>

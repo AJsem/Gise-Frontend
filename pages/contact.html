@@ -76,13 +76,15 @@
         </div>
             
         <form action="https://formsubmit.co/emmanuelavwomakpa@gmail.com" method="POST" class="contact">
-            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="text" name="Gise Form Type" value="Inquiry/Contact" class="hidden">
 
-            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="text" name="Client's Name" placeholder="Full Name" required>
 
-            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="email" name="Client's Email" placeholder="Email Address" required>
 
-            <select name="services" id="services" required>
+            <input type="tel" name="phone" placeholder="Client's Phone Number" required>
+
+            <select name="Services Needed" id="services" required>
                 <option value="" disabled selected>Select a service</option>
                 <option value="Audit">Audit</option>
                 <option value="Bookeeping">Bookkeeping</option>
@@ -98,7 +100,7 @@
                 <option value="Transition Planning">Transition planning</option>
             </select>
 
-            <textarea name="message" id="" placeholder="Your Message" required></textarea>
+            <textarea name="Client's Message" id="" placeholder="Your Message" required></textarea>
 
             <button type="submit">Send Message</button>
         </form>
