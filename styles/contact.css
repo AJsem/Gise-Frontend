@@ -1,3 +1,7 @@
+select option {
+    font-size: 1.4rem !important;
+}
+
 main.container {
     padding-top: 7rem;
     padding-left: 3rem;
