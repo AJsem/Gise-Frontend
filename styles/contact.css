@@ -10,7 +10,7 @@ main.container div.intro:first-of-type p.instr {
 }
 
 main.container div.contact {
-    background: var(--clr-sub-2);
+    background: var(--clr-txt);
     color: var(--clr-primary);
     max-width: 40rem;
     padding: 2rem;
@@ -41,7 +41,7 @@ form.contact {
     width: 100%;
     max-width: 40rem;
     padding: 2rem;
-    border: .1rem solid var(--clr-sub-2);
+    border: .1rem solid var(--clr-txt);
     margin-bottom: 8rem;
     margin-top: -2rem;
 }
@@ -53,7 +53,7 @@ form.contact button[type="submit"] {
     padding: 1rem 1.5rem;
     border: .1rem solid transparent;
     border-radius: .5rem;
-    background-color: var(--clr-sub-2);
+    background-color: var(--clr-txt);
     color: var(--clr-primary);
     font-size: 1.6rem;
 }

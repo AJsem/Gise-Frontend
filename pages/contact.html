@@ -7,19 +7,19 @@
     <meta name="description" content="Gise provides accounting, advisory, financial, and business consulting services designed to help organizations grow with confidence.">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Gise Accounting - Contact Us">
-    <meta property="og:description" content="Professional accounting, advisory, and business consulting services for modern organizations.">
-    <meta property="og:image" content="https://ajsem.github.io/Gise-Frontend/assets/images/preview.png">
+    <meta property="og:title" content="Gise Advisory - Contact Us">
+    <meta property="og:description" content="A professional service group specializing in Accounting, Audit, Taxation, Risk & Financial Management consulting, and Outsourcing.">
+    <meta property="og:image" content="https://ajsem.github.io/Gise-Frontend/assets/images/preview.jpg">
     <meta property="og:url" content="https://ajsem.github.io/Gise-Frontend/">
     <meta property="og:type" content="website">
 
     <!-- Twitter/X -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Gise Accounting - Contact Us">
-    <meta name="twitter:description" content="Professional accounting, advisory, and business consulting services.">
-    <meta name="twitter:image" content="https://ajsem.github.io/Gise-Frontend/assets/images/preview.png">
+    <meta name="twitter:title" content="Gise Advisory - Contact Us">
+    <meta name="twitter:description" content="A professional service group specializing in Accounting, Audit, Taxation, Risk & Financial Management consulting, and Outsourcing.">
+    <meta name="twitter:image" content="https://ajsem.github.io/Gise-Frontend/assets/images/preview.jpg">
 
-    <title>Gise Accounting - Contact Us</title>
+    <title>Gise Advisory - Contact Us</title>
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/contact.css">
@@ -41,7 +41,7 @@
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="insights.html">Insights</a></li>
-            <a href="contact.html" class="btn book-consultation">Book a consultation</a>
+            <a href="book-consultation.html" class="btn book-consultation">Book a consultation</a>
         </ul>
     </nav>
 
@@ -82,11 +82,20 @@
 
             <input type="tel" name="phone" placeholder="Phone Number" required>
 
-            <select name="services" id="">
+            <select name="services" id="services" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="Audit">Audit</option>
                 <option value="Bookeeping">Bookkeeping</option>
-                <option value="Tax planning">Tax planning</option>
-                <option value="Payroll">Payroll</option>
                 <option value="Business Advisory">Business Advisory</option>
+                <option value="Corporate Advisory">Corporate Advisory</option>
+                <option value="Debt/Capital Structuring">Debt and Capital Structuring</option>
+                <option value="Estate Planning">Estate Planning</option>
+                <option value="Financial Management">Financial Management</option>
+                <option value="Gise Innovation Commercialisation Patnership">Gise Commercialised Patnership</option>
+                <option value="Payroll">Payroll</option>
+                <option value="Seminars">Seminars</option>
+                <option value="Tax planning">Tax planning</option>
+                <option value="Transition Planning">Transition planning</option>
             </select>
 
             <textarea name="message" id="" placeholder="Your Message" required></textarea>
@@ -145,7 +154,7 @@
         <a href="#top" class="back-top">Go to top</a>
 
         <div class="copyright">
-            <p>Accounting | Advisory Services | Economic Consulting</p>
+            <p>Advisory Services | Accounting | Taxation | BPO | FMC</p>
             <p >&copy <span class="year"></span> GISE. All rights reserved.</p>
         </div>
     </footer>

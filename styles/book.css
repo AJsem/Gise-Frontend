@@ -1,0 +1,47 @@
+main.container {
+	width: 100%;
+}
+input#date, input#time {
+	cursor: pointer;
+	margin-bottom: .5rem;
+}
+
+label {
+	font-size: 1.6rem;
+	margin-bottom: -1rem;
+}
+
+div.intro.form {
+	margin-top: 0;
+}
+
+p.consultHead {
+	font-weight: 500;
+}
+
+section.our-core-values {
+    margin-bottom: 6rem;
+}
+
+main.container section.our-core-values ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+section.our-core-values ul li {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: var(--clr-txt);
+    color: var(--clr-dark);
+    box-shadow: var(--clr-shadow-1);
+    border-bottom: .1rem solid var(--clr-light);
+}
+
+section.our-core-values ul li div.title {
+    font-size: calc(var(--font-size-h3) + .2rem);
+}

@@ -95,8 +95,9 @@ nav div.name-logo {
 }
 
 div.name-logo img.logo {
-    width: 4rem;
+    width: 3rem;
     height: auto;
+    margin-left: .5rem;
 }
 
 nav div.nav-btn {

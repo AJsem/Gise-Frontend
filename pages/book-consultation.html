@@ -7,22 +7,23 @@
     <meta name="description" content="Gise provides accounting, advisory, financial, and business consulting services designed to help organizations grow with confidence.">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Gise Accounting - Book Consultation">
-    <meta property="og:description" content="Professional accounting, advisory, and business consulting services for modern organizations.">
-    <meta property="og:image" content="https://ajsem.github.io/Gise-Frontend/assets/images/preview.png">
+    <meta property="og:title" content="Gise Advisory - Book Consultation">
+    <meta property="og:description" content="A professional service group specializing in Accounting, Audit, Taxation, Risk & Financial Management consulting, and Outsourcing.">
+    <meta property="og:image" content="https://ajsem.github.io/Gise-Frontend/assets/images/preview.jpg">
     <meta property="og:url" content="https://ajsem.github.io/Gise-Frontend/">
     <meta property="og:type" content="website">
 
     <!-- Twitter/X -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Gise Accounting - Book Consultation">
-    <meta name="twitter:description" content="Professional accounting, advisory, and business consulting services.">
-    <meta name="twitter:image" content="https://ajsem.github.io/Gise-Frontend/assets/images/preview.png">
+    <meta name="twitter:title" content="Gise Advisory - Book Consultation">
+    <meta name="twitter:description" content="A professional service group specializing in Accounting, Audit, Taxation, Risk & Financial Management consulting, and Outsourcing.">
+    <meta name="twitter:image" content="https://ajsem.github.io/Gise-Frontend/assets/images/preview.jpg">
 
-    <title>Gise Accounting - Book Consultation</title>
+    <title>Gise Advisory - Book Consultation</title>
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/contact.css">
+    <link rel="stylesheet" href="../styles/book.css">
     <link rel="icon" href="../assets/images/favicon.ico">
 </head>
 <body>
@@ -46,7 +47,73 @@
     </nav>
 
     <main class="container">
-        <h1>JxGrim Dev: Please page is currently under development. Visit contact page to send us a direct message.</h1>
+        <div class="intro">
+            <h2>Hi there!</h2>
+            <p>Get expert guidance from our team of professionals in Accounting, Audit, Taxation, Risk Management, Financial Advisory, and Outsourcing</p>
+            <p class="instr">Schedule your consultation now:</p>
+        </div>
+
+        <div></div>
+            
+        <form action="https://formsubmit.co/emmanuelavwomakpa@gmail.com" method="POST" class="contact">
+            <div class="intro form">
+                <p class="consultHead">Consultation Form:</p>
+            </div>
+
+            <input type="text" name="name" placeholder="Full Name" required>
+
+            <input type="email" name="email" placeholder="Email Address" required>
+
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+
+            <select name="services" id="services" required>
+                <option value="" disabled selected>Service required</option>
+                <option value="Audit">Audit</option>
+                <option value="Bookeeping">Bookkeeping</option>
+                <option value="Business Advisory">Business Advisory</option>
+                <option value="Corporate Advisory">Corporate Advisory</option>
+                <option value="Debt/Capital Structuring">Debt and Capital Structuring</option>
+                <option value="Estate Planning">Estate Planning</option>
+                <option value="Financial Management">Financial Management</option>
+                <option value="Gise Innovation Commercialisation Patnership">Gise Commercialised Patnership</option>
+                <option value="Payroll">Payroll</option>
+                <option value="Seminars">Seminars</option>
+                <option value="Tax planning">Tax planning</option>
+                <option value="Transition Planning">Transition planning</option>
+            </select>
+
+            <label for="date">Preferred Consultation Date</label>
+            <input type="date" id="date" name="consultationDate"  required>
+
+            <label for="time">Preferred Time</label>
+            <input type="time" id="time" name="consultationTime" value="12:00" required>
+
+            <textarea name="message" id="" placeholder="Tell us about your business needs or challenges..." required></textarea>
+
+            <button type="submit">Request Consultation</button>
+        </form>
+
+        <section class="our-core-values">
+            <h3>Why Consult With Us?</h3>
+            <ul class="core-values">
+                <li>
+                    <div class="title">Expert Guidance:</div>
+                    <p>Get professional advice tailored to your business goals.</p>
+                </li>
+                <li>
+                    <div class="title">Business Solutions:</div>
+                    <p>Practical strategies to improve financial performance and compliance.</p>
+                </li>
+                <li>
+                    <div class="title">Confidentiality</div>
+                    <p>We maintain the highest level of confidentiality for all client information and communications.</p>
+                </li>
+                <li>
+                    <div class="title">Client-Centric Approach:</div>
+                    <p>We prioritize our clients' needs and work diligently to provide personalized solutions that meet their unique requirements.</p>
+                </li>
+            </ul>
+        </section>
     </main>
 
     <footer>
@@ -99,7 +166,7 @@
         <a href="#top" class="back-top">Go to top</a>
 
         <div class="copyright">
-            <p>Accounting | Advisory Services | Economic Consulting</p>
+            <p>Advisory Services | Accounting | Taxation | BPO | FMC</p>
             <p >&copy <span class="year"></span> GISE. All rights reserved.</p>
         </div>
     </footer>
