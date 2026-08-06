@@ -82,8 +82,8 @@ nav {
 }
 
 nav h3.name {
-    font-weight: 400;
-    color: var(--clr-light);
+    /*font-weight: 400;*/
+    /*color: var(--clr-light);*/
 }
 
 nav div.name-logo {
@@ -92,6 +92,7 @@ nav div.name-logo {
     display: flex;
     align-items: center;
     gap: 0rem;
+    cursor: pointer;
 }
 
 div.name-logo img.logo {
@@ -704,6 +705,19 @@ footer li
 }
 
 /* UTILITIES AND OTHER STYLINGS */
+.reveal {
+    opacity: 0;
+    transform: translateY(20rem);
+    transition: 
+        opacity .5s ease-out,
+        transform .7s cubic-bezier(0, 0, .4, 1);
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 h1 {
     font-size: var(--font-size-h1);
     font-weight: var(--font-weight-h1);

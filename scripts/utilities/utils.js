@@ -9,7 +9,31 @@ const scrolledNav = () => {
     })
 }
 
+const nameLink = () => {
+    const nameCont = document.querySelector("nav div.name-logo");
+
+    nameCont.addEventListener("click", () => window.location.href = window.location.origin);
+}
+
+const inView = () => {
+    const reveals = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver((entries) => {
+        const visible = entries.filter((entry) => entry.isIntersecting);
+
+        visible.forEach(entry => {
+            entry.target.classList.add("show");
+            // observer.unobserve(entry.target);
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    reveals.forEach(reveal => observer.observe(reveal));
+}
+
 const navigation = () => {
+    inView();
+    nameLink();
     scrolledNav();
     const navBtn = document.querySelector('nav .nav-btn');
     const dropDown = document.querySelector('nav .links');
